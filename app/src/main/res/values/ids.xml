@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="id_list" type="id"/>
+    <item name="id_title" type="id"/>
+    <item name="id_icon" type="id"/>
+    <item name="id_pager" type="id"/>
+    <item name="id_value" type="id"/>
+</resources>

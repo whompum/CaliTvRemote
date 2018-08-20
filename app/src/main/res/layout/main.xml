@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tempOne"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageButton
+            style="@style/StyleIcon"
+            android:layout_gravity="start"
+            android:src="@drawable/icon_open_circle"
+            android:layout_width="@dimen/dimen_icon_size"
+            android:layout_height="@dimen/dimen_icon_size" />
+
+        <ImageButton
+            style="@style/StyleIcon"
+            android:layout_gravity="end"
+            android:src="@drawable/icon_person"
+            android:layout_width="@dimen/dimen_icon_size"
+            android:layout_height="@dimen/dimen_icon_size" />
+    </FrameLayout>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/tempOne"
+        android:id="@+id/tempTwo"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <android.support.v4.view.ViewPager
+        app:layout_constraintTop_toBottomOf="@id/tempTwo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@id/id_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <android.support.v4.view.ViewPager
+        app:layout_constraintTop_toBottomOf="@id/tempTwo"
+        app:layout_constraintBottom_toBottomOf="@id/tempTwo"
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/local_tab_pager"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"/>
+
+
+</android.support.constraint.ConstraintLayout>
