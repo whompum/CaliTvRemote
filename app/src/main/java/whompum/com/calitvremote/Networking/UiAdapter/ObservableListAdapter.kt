@@ -2,6 +2,7 @@ package whompum.com.calitvremote.Networking.UiAdapter
 
 import android.support.annotation.IdRes
 import android.support.annotation.NonNull
+import android.util.Log
 import android.view.View
 import whompum.com.calitvremote.Networking.Model.Reference
 import whompum.com.calitvremote.Networking.Model.ReferenceItem
@@ -53,11 +54,13 @@ abstract class ObservableListAdapter(data: List<Reference> = ArrayList(),
 
         item?.value = newValue
 
-        if(!changedReferences.contains(baseItem))
-            changedReferences.add(baseItem) //The change hasn't been documented
+        //If item has changed, AND isn't documented:
+        if(item?.hasChanged()!! && !changedReferences.contains(baseItem))
+            changedReferences.add(baseItem)
 
-        else if(changedReferences.contains(baseItem))
-            changedReferences.remove(baseItem) //THe change most likely was reset.
+        //Else if the Item hasn't Changed, BUT is documented:
+        else if(!item.hasChanged() && changedReferences.contains(baseItem))
+            changedReferences.remove(baseItem)
 
         changeClient(changedReferences)
     }
