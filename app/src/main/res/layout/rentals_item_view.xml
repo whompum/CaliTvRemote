@@ -1,67 +1,17 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    app:cardCornerRadius="6dp"
-    app:cardElevation="2dp"
-    android:layout_marginTop="@dimen/dimen_12dp"
-    android:layout_marginStart="@dimen/dimen_16dp"
-    android:layout_marginEnd="@dimen/dimen_16dp"
+    app:cardCornerRadius="@dimen/dimen_card_radius"
+    app:cardElevation="@dimen/dimen_elevation"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/id_local_rental_item"
+    android:layout_marginTop="@dimen/dimen_padding_ver_base"
+    android:layout_marginStart="@dimen/dimen_padding_hor_base"
+    android:layout_marginEnd="@dimen/dimen_padding_hor_base"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/dimen_card_height">
 
-<android.support.constraint.ConstraintLayout
-    android:padding="@dimen/dimen_12dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <include layout="@layout/rentals_item"/>
 
-    <android.support.constraint.Guideline
-        app:layout_constraintGuide_percent=".6"
-        android:id="@+id/local_guide"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <TextView
-        style="@style/StylePriceItemTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@id/id_title"
-        android:text="@string/string_title"/>
-
-    <TextView
-        style="@style/StylePriceItemTitle"
-        app:layout_constraintStart_toStartOf="@id/local_guide"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/string_three_hours"
-        android:id="@+id/local_three_hour"/>
-
-    <TextView
-        style="@style/StylePriceItemTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/string_full_day"
-        android:id="@+id/local_full_day"/>
-
-    <EditText
-        style="@style/StylePriceItemValue"
-        app:layout_constraintTop_toBottomOf="@id/id_title"
-        app:layout_constraintStart_toStartOf="@id/id_title"
-        android:id="@+id/local_rental_title"/>
-
-    <EditText
-        style="@style/StylePriceItemValue"
-        app:layout_constraintStart_toStartOf="@id/local_three_hour"
-        app:layout_constraintTop_toBottomOf="@id/local_three_hour"
-        android:hint="N/A"
-        android:id="@+id/local_three_hour_value"/>
-
-    <EditText
-        style="@style/StylePriceItemValue"
-        app:layout_constraintStart_toStartOf="@id/local_full_day"
-        app:layout_constraintTop_toBottomOf="@id/local_full_day"
-        android:hint="N/A"
-        android:id="@+id/local_full_day_value"/>
-
-</android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

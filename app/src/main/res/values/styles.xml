@@ -9,6 +9,7 @@
     </style>
 
     <style name="StyleIcon">
+        <item name="android:id">@id/id_icon</item>
         <item name="android:tint">@color/color_light</item>
         <item name="android:background">?android:selectableItemBackgroundBorderless</item>
         <item name="android:layout_width">@dimen/dimen_icon_size</item>
@@ -16,26 +17,29 @@
     </style>
 
     <style name="StyleIcon.Mini">
+        <item name="android:scaleType">centerInside</item>
         <item name="android:padding">14dp</item>
     </style>
 
     <style name="StylePriceItemValue">
-        <item name="android:id">@id/id_value</item>
+        <item name="android:id">@id/id_item_value</item>
         <item name="android:hint">@string/string_hint</item>
         <item name="android:textColorHint">@color/colorPrimary</item>
         <item name="android:background">@null</item>
-        <item name="android:textSize">@dimen/dimen_text_mediumo</item>
+        <item name="android:textSize">@dimen/dimen_text_normal</item>
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:minHeight">48dp</item>
+        <item name="android:minHeight">@dimen/dimen_value_editor_height</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="StylePriceItemTitle">
-        <item name="android:id">@id/id_title</item>
+        <item name="android:id">@id/id_item_title</item>
         <item name="android:textColor">@color/color_dark</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
+    <style name="StyleDialog" parent="Base.Theme.AppCompat.Dialog"/>
 
 </resources>

@@ -1,7 +1,5 @@
 package whompum.com.calitvremote.Rentals
 
-import whompum.com.calitvremote.TvItem.Adapter.TvItemAdapterBinder
+import whompum.com.calitvremote.Networking.Model.ReferenceItem
 
-data class RentalsItem(val title: String,
-                  val threeHoursPrice: String?,
-                  val fullDayPrice: String?): TvItemAdapterBinder
+class RentalsItem(parentRef: String, ref: String, value: String = ""): ReferenceItem(parentRef, ref, value)

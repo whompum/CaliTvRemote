@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_selector_height"
+        android:id="@+id/id_local_seconds_list"
+        tools:listitem="@layout/seconds_item_view" />
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:background="#4ed57e"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_selector_item_view_height">
+        <LinearLayout
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/local_seconds_container"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            tools:text="1"
+            android:textSize="@dimen/dimen_text_large"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/local_second_highlighted"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/string_seconds"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/dimen_text_medium"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

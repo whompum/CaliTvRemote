@@ -5,18 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/price_item"/>
+    <android.support.v7.widget.RecyclerView
+        android:paddingTop="@dimen/dimen_padding_ver_large"
+        android:id="@id/id_editable_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+<LinearLayout
+    android:layout_gravity="bottom|end"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.design.widget.FloatingActionButton
+        app:fabSize="mini"
+        app:elevation="@dimen/dimen_elevation_deep"
+        app:backgroundTint="@color/colorPrimary"
+        app:rippleColor="@color/color_dark"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/id_editable_save_fab"
+        android:src="@drawable/icon_save"
+        android:tint="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.FloatingActionButton
         app:fabSize="normal"
-        app:elevation="2dp"
+        app:elevation="@dimen/dimen_elevation_deep"
         app:backgroundTint="@android:color/white"
+        app:useCompatPadding="true"
         app:rippleColor="@color/color_dark"
-        android:id="@+id/local_id_fab"
+        android:id="@id/id_fab"
         android:src="@drawable/icon_add"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/dimen_16dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
+</LinearLayout>
+
+
 
 </FrameLayout>

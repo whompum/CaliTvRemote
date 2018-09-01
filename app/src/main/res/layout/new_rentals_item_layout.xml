@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/dimen_padding_hor_base"
+    android:paddingEnd="@dimen/dimen_padding_hor_base"
+    android:paddingTop="@dimen/dimen_padding_ver_tiny"
+    android:paddingBottom="@dimen/dimen_padding_ver_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/rentals_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/local_items_view"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/local_items_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/dimen_padding_hor_base"
+        android:text="@string/string_save"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:id="@id/id_save"
+        android:textColor="@color/color_dark"
+        android:textSize="@dimen/dimen_text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

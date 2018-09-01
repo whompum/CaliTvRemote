@@ -3,18 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="6dp"
-    app:cardElevation="2dp"
-    android:layout_marginTop="@dimen/dimen_12dp"
-    android:layout_marginStart="@dimen/dimen_16dp"
-    android:layout_marginEnd="@dimen/dimen_16dp"
+    app:cardCornerRadius="@dimen/dimen_card_radius"
+    app:cardElevation="@dimen/dimen_elevation"
+    android:layout_marginTop="@dimen/dimen_padding_ver_base"
+    android:layout_marginStart="@dimen/dimen_padding_hor_base"
+    android:layout_marginEnd="@dimen/dimen_padding_hor_base"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/dimen_card_height">
 
 <android.support.constraint.ConstraintLayout
-    android:paddingStart="@dimen/dimen_12dp"
-    android:paddingEnd="@dimen/dimen_12dp"
-    android:paddingTop="@dimen/dimen_12dp"
+    android:paddingStart="@dimen/dimen_padding_hor_base"
+    android:paddingEnd="@dimen/dimen_padding_hor_base"
+    android:paddingTop="@dimen/dimen_padding_ver_small"
+    android:paddingBottom="@dimen/dimen_padding_ver_small"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -27,18 +28,17 @@
     <ImageView
         style="@style/StyleIcon.Mini"
         tools:src="@drawable/icon_location"
-        app:layout_constraintTop_toBottomOf="@id/id_title"
+        app:layout_constraintTop_toBottomOf="@id/id_item_title"
         app:layout_constraintStart_toStartOf="parent"
-        android:id="@id/id_icon"
         android:tint="@color/color_dark"/>
 
     <EditText
-        tools:text="primary title"
+        tools:text="primary Value"
         app:layout_constraintTop_toTopOf="@id/id_icon"
         app:layout_constraintBottom_toBottomOf="@id/id_icon"
         app:layout_constraintStart_toEndOf="@id/id_icon"
         style="@style/StylePriceItemValue"
-        android:layout_marginStart="@dimen/dimen_12dp" />
+        android:layout_marginStart="@dimen/dimen_padding_hor_base" />
 </android.support.constraint.ConstraintLayout>
 
 </android.support.v7.widget.CardView>

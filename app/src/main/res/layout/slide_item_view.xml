@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/dimen_padding_ver_base"
+    android:layout_marginStart="@dimen/dimen_padding_hor_base"
+    android:layout_marginEnd="@dimen/dimen_padding_hor_base"
+    app:cardCornerRadius="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:paddingStart="@dimen/dimen_padding_hor_large"
+        android:paddingEnd="@dimen/dimen_padding_hor_base"
+        android:paddingTop="@dimen/dimen_padding_ver_small"
+        android:paddingBottom="@dimen/dimen_padding_ver_small"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_slide_item_height">
+
+    <TextView
+        tools:text="@string/string_rentals"
+        android:textColor="@color/color_dark"
+        android:textSize="@dimen/dimen_text_normal"
+        android:id="@+id/id_local_slide_title"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+            tools:text="1"
+            android:textColor="@color/color_dark"
+            android:textSize="@dimen/dimen_text_normal"
+            android:id="@+id/id_local_slide_position"
+            android:layout_gravity="end|top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/id_local_duration_container"
+        android:layout_gravity="end|bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        tools:text="30 Seconds"
+        android:id="@+id/id_local_slide_duration"
+        android:textColor="@color/color_dark"
+        android:background="@null"
+        android:textSize="@dimen/dimen_text_normal"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_padding_hor_tiny"
+        android:src="@drawable/icon_clock_dark"
+        android:id="@+id/local_id_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

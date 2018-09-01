@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="id_list" type="id"/>
-    <item name="id_title" type="id"/>
+    <item name="id_item_title" type="id"/>
+    <item name="id_item_value" type="id"/>
+    <item name="id_fab" type="id"/>
     <item name="id_icon" type="id"/>
     <item name="id_pager" type="id"/>
-    <item name="id_value" type="id"/>
+    <item name="id_save" type="id"/>
+
+    <item name="id_editable_list" type="id"/>
+    <item name="id_editable_save_fab" type="id"/>
+
 </resources>

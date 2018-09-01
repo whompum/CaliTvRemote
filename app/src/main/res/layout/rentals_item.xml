@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        app:layout_constraintGuide_percent=".6"
+        android:id="@+id/local_guide"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        style="@style/StylePriceItemTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/string_title"/>
+
+    <TextView
+        style="@style/StylePriceItemTitle"
+        app:layout_constraintStart_toStartOf="@id/local_guide"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/string_three_hours"
+        android:id="@+id/local_three_hour"/>
+
+    <TextView
+        style="@style/StylePriceItemTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/string_full_day"
+        android:id="@+id/local_full_day"/>
+
+    <!--
+        Enabled is false, since the title isn't always
+        editable. Users of this file can set enabled as needed.
+    -->
+    <EditText
+        style="@style/StylePriceItemValue"
+        android:gravity="center_vertical"
+        android:id="@+id/local_rental_title"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/id_item_title"
+        app:layout_constraintStart_toStartOf="@id/id_item_title"/>
+
+    <EditText
+        style="@style/StylePriceItemValue"
+        app:layout_constraintStart_toStartOf="@id/local_three_hour"
+        app:layout_constraintTop_toBottomOf="@id/local_three_hour"
+        android:hint="@string/string_no_data"
+        android:id="@+id/local_three_hour_value"/>
+
+    <EditText
+        style="@style/StylePriceItemValue"
+        app:layout_constraintStart_toStartOf="@id/local_full_day"
+        app:layout_constraintTop_toBottomOf="@id/local_full_day"
+        android:hint="@string/string_no_data"
+        android:id="@+id/local_full_day_value"/>
+
+</android.support.constraint.ConstraintLayout>

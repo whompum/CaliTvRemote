@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="dimen_icon_size">48dp</dimen>
 
-    <dimen name="dimen_8dp">8dp</dimen>
-    <dimen name="dimen_12dp">12dp</dimen>
-    <dimen name="dimen_16dp">16dp</dimen>
-    <dimen name="dimen_32dp">32dp</dimen>
-    <dimen name="dimen_text_mediumo">18sp</dimen>
+    <!-- TEXT SIZES -->
+    <dimen name="dimen_text_small">14sp</dimen>
+    <dimen name="dimen_text_normal">18sp</dimen>
+    <dimen name="dimen_text_medium">24dp</dimen>
+    <dimen name="dimen_text_large">38dp</dimen>
+
+    <!-- PADDING / MARGIN -->
+    <dimen name="dimen_padding_hor_tiny">6dp</dimen>
+    <dimen name="dimen_padding_hor_small">6dp</dimen>
+    <dimen name="dimen_padding_hor_base">12dp</dimen>
+    <dimen name="dimen_padding_hor_large">18dp</dimen>
+
+    <dimen name="dimen_padding_ver_tiny">4dp</dimen>
+    <dimen name="dimen_padding_ver_small">8dp</dimen>
+    <dimen name="dimen_padding_ver_base">16dp</dimen>
+    <dimen name="dimen_padding_ver_large">24dp</dimen>
+    <dimen name="dimen_padding_ver_x_large">48dp</dimen>
+
+
+    <!-- CHANGE ACCORDING TO SCREEN DP WIDTH -->
+    <dimen name="dimen_max_dialog_width">360dp</dimen>
+
+    <!-- TAB -->
+    <dimen name="dimen_tab_height">76dp</dimen>
+    <dimen name="dimen_tab_radius">20dp</dimen>
+
+    <!-- UTILITY -->
+    <dimen name="dimen_elevation">2dp</dimen>
+    <dimen name="dimen_elevation_deep">8dp</dimen>
+    <dimen name="dimen_card_radius">6dp</dimen>
+    <dimen name="dimen_oval_min_width">265dp</dimen>
+    <dimen name="dimen_icon_size">48dp</dimen>
+    <dimen name="dimen_action_margin">16dp</dimen>
+    <dimen name="dimen_value_editor_height">48dp</dimen>
+
+    <!-- SECOND SELECTOR -->
+    <dimen name="dimen_selector_height">180dp</dimen>
+    <dimen name="dimen_selector_item_view_height">60dp</dimen>
+
+    <!-- SLIDE REMOTE -->
+    <dimen name="dimen_slide_item_height">102dp</dimen>
+
+    <!-- CARD HEIGHT-->
+    <dimen name="dimen_card_height">86dp</dimen>
 </resources>

@@ -6,53 +6,51 @@
     android:background="@color/color_light"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main.MainActivity">
 
     <FrameLayout
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/tempOne"
+        android:id="@+id/id_local_header"
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="56dp">
+        android:layout_height="wrap_content">
 
         <ImageButton
             style="@style/StyleIcon"
             android:layout_gravity="start"
-            android:src="@drawable/icon_open_circle"
-            android:layout_width="@dimen/dimen_icon_size"
-            android:layout_height="@dimen/dimen_icon_size" />
+            android:id="@+id/id_local_remote"
+            android:src="@drawable/icon_open_circle" />
 
         <ImageButton
-            style="@style/StyleIcon"
+            style="@style/StyleIcon.Mini"
+            android:id="@+id/local_id_login"
             android:layout_gravity="end"
-            android:src="@drawable/icon_person"
-            android:layout_width="@dimen/dimen_icon_size"
-            android:layout_height="@dimen/dimen_icon_size" />
+            android:src="@drawable/icon_lock" />
     </FrameLayout>
 
     <View
-        app:layout_constraintTop_toBottomOf="@id/tempOne"
-        android:id="@+id/tempTwo"
+        app:layout_constraintTop_toBottomOf="@id/id_local_header"
+        android:id="@+id/id_local_aligner"
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="36dp"/>
+        android:layout_height="@dimen/dimen_padding_ver_large"/>
 
     <android.support.v4.view.ViewPager
-        app:layout_constraintTop_toBottomOf="@id/tempTwo"
+        app:layout_constraintTop_toBottomOf="@id/id_local_aligner"
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@id/id_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
 
-    <android.support.v4.view.ViewPager
-        app:layout_constraintTop_toBottomOf="@id/tempTwo"
-        app:layout_constraintBottom_toBottomOf="@id/tempTwo"
+    <whompum.com.calitvremote.Main.Tabs.TabViewPager
+        app:layout_constraintTop_toBottomOf="@id/id_local_aligner"
+        app:layout_constraintBottom_toBottomOf="@id/id_local_aligner"
         android:clickable="false"
         android:focusable="false"
         android:id="@+id/local_tab_pager"
         android:layout_width="match_parent"
-        android:layout_height="76dp"/>
+        android:layout_height="@dimen/dimen_tab_height"/>
 
 
 </android.support.constraint.ConstraintLayout>

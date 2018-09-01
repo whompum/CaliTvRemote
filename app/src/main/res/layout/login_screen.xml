@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimen_padding_ver_base"
+        android:gravity="center"
+        android:text="@string/multiline_app_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/dimen_text_large"
+        android:id="@+id/id_local_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_local_app_name"
+        android:id="@+id/local_account_priviliges"
+        android:layout_marginTop="@dimen/dimen_padding_ver_base"
+        android:gravity="center"
+        android:text="@string/string_account_privileges"
+        android:textColor="@color/color_dark"
+        android:textSize="@dimen/dimen_text_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/local_id_half_guide"
+        android:paddingTop="@dimen/dimen_padding_ver_tiny"
+        android:paddingBottom="@dimen/dimen_padding_ver_tiny"
+        android:paddingStart="@dimen/dimen_padding_ver_tiny"
+        android:paddingEnd="@dimen/dimen_padding_hor_base"
+        android:id="@+id/local_email_container"
+        android:background="@drawable/background_oval"
+        android:orientation="horizontal"
+        android:minWidth="@dimen/dimen_oval_min_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/background_user_email"
+            android:layout_width="@dimen/dimen_icon_size"
+            android:layout_height="@dimen/dimen_icon_size" />
+
+        <EditText
+            android:textColor="@color/color_dark"
+            android:textColorHint="@color/color_dark"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/id_local_email_editor"
+            android:hint="@string/string_email_hint"
+            android:layout_marginStart="@dimen/dimen_padding_hor_small"
+            android:textSize="@dimen/dimen_text_small"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/local_id_half_guide"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/dimen_padding_ver_large" />
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/local_id_half_guide"
+        android:id="@+id/local_password_container"
+        android:background="@drawable/background_oval"
+        android:paddingTop="@dimen/dimen_padding_ver_tiny"
+        android:paddingBottom="@dimen/dimen_padding_ver_tiny"
+        android:paddingStart="@dimen/dimen_padding_ver_tiny"
+        android:paddingEnd="@dimen/dimen_padding_hor_base"
+        android:orientation="horizontal"
+        android:minWidth="@dimen/dimen_oval_min_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/background_user_password"
+            android:layout_width="@dimen/dimen_icon_size"
+            android:layout_height="@dimen/dimen_icon_size" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="@dimen/dimen_padding_hor_small"
+            app:passwordToggleDrawable="@drawable/background_visibility_toggle"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false"
+            app:passwordToggleTint="@color/color_dark">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textColor="@color/color_dark"
+                android:textColorHint="@color/color_dark"
+                android:id="@+id/id_local_password_editor"
+                android:textSize="@dimen/dimen_text_small"
+                android:paddingEnd="@dimen/dimen_padding_hor_base"
+                android:hint="@string/string_password_hint"
+                android:inputType="textPassword"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dimen_padding_hor_large"
+        android:layout_marginBottom="@dimen/dimen_padding_ver_large"
+        android:drawableEnd="@drawable/icon_arrow_right"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:textSize="@dimen/dimen_text_medium"
+        android:id="@+id/id_local_login"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/string_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

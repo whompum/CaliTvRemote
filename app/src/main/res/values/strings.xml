@@ -1,20 +1,28 @@
 <resources>
     <string name="app_name">CaliTvRemote</string>
 
+    <!-- Account -->
     <string name="string_email">Email</string>
+    <string name="string_email_hint">Enter Your Email</string>
     <string name="string_password">Password</string>
+    <string name="string_password_hint">Enter Your Password</string>
     <string name="string_account_privileges">Account Privileges</string>
-    <string name="string_new_account">New Account</string>
     <string name="string_login">Log In</string>
+    <string name="multiline_app_name">CaliTv \n Remote</string>
 
+
+    <!-- Tab Titles -->
     <string name="string_shelf">Dashboard</string>
     <string name="string_rentals">Rentals</string>
     <string name="string_contact">Contact</string>
+
 
     <!-- Rentals -->
     <string name="string_title">Title</string>
     <string name="string_full_day">Full Day</string>
     <string name="string_three_hours">Three Hours</string>
+    <string name="string_delete_confirmation_body">Do you want to delete the item </string>
+    <string name="string_delete_confirmation_header">Delete this item</string>
 
 
     <!-- Contact -->
@@ -27,17 +35,30 @@
     <string name="string_facebook">facebook</string>
     <string name="string_facebook_group">facebook-group</string>
 
+
     <!-- Shelf -->
     <string name="string_ancilliary">Ancilliary</string>
     <string name="string_lock">lock</string>
     <string name="string_laundry">Laundry</string>
     <string name="string_towel">Towel</string>
 
+
     <!-- shelf-extras -->
     <string name="string_breakfast">Breakfast</string>
     <string name="string_checkin">Checkin</string>
     <string name="string_checkout">Checkout</string>
 
+
+    <!-- MISCELLANEOUS -->
     <string name="string_hint">Text Goes Here</string>
+    <string name="string_save">Save</string>
+    <string name="string_no_data">N/A</string>
+    <string name="string_slide_controller">Slide Controller</string>
+    <string name="string_seconds">s</string>
+
+    <!-- RESPONSE MSG'S -->
+    <string name="string_error_saving">Save Failed. Do you have proper credentials?</string>
+    <string name="string_success_saving">Save Successful</string>
+
 
 </resources>

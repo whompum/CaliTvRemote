@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.v7.widget.CardView
+    app:cardBackgroundColor="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageButton
+        style="@style/StyleIcon"
+        android:id="@+id/id_local_up"
+        android:src="@drawable/icon_arrow_left"/>
+
+    <TextView
+        android:text="@string/string_slide_controller"
+        android:textSize="@dimen/dimen_text_normal"
+        android:textColor="@android:color/white"
+        android:id="@+id/stupid_monotonous_text_view"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        style="@style/StyleIcon.Mini"
+        android:src="@drawable/icon_lock"/>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_remote_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
