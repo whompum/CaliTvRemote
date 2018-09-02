@@ -1,9 +1,9 @@
 package whompum.com.calitvremote.Rentals.UiAdapter
 
-import whompum.com.calitvremote.Networking.UiAdapter.ReferenceLayoutProvider
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
-import whompum.com.calitvremote.R
+import com.californiadreamshostel.firebaseclient.Reference
+import com.californiadreamshostel.firebaseclient.ReferenceItem
+import whompum.com.calitvremote.UiAdapter.ReferenceLayoutProvider
+import whompum.com.calitvremote.R.*
 
 class RentalsLayoutProvider: ReferenceLayoutProvider() {
 
@@ -20,7 +20,7 @@ class RentalsLayoutProvider: ReferenceLayoutProvider() {
     }
 
     override fun getLayout(viewType: Int): Int {
-        return R.layout.rentals_item_view
+        return layout.rentals_item_view
     }
 
     override fun getViewtype(ref: Reference): Int {

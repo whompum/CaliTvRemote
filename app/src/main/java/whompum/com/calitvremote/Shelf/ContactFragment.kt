@@ -1,11 +1,11 @@
 package whompum.com.calitvremote.Shelf
 
 import android.support.v4.app.Fragment
+import com.californiadreamshostel.firebaseclient.DataSchema
+import com.californiadreamshostel.firebaseclient.Reference
 import whompum.com.calitvremote.Shelf.Model.ShelfItem
 import whompum.com.calitvremote.Shelf.Model.ShelfItemHeader
 
-import whompum.com.calitvremote.Networking.Data.DataSchema
-import whompum.com.calitvremote.Networking.Model.Reference
 import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Shelf.UiAdapter.ContactLayoutProvider
 

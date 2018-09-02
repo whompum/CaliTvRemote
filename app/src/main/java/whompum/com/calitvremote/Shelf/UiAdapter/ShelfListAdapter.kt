@@ -2,9 +2,9 @@ package whompum.com.calitvremote.Shelf.UiAdapter
 
 import android.support.annotation.NonNull
 import android.view.View
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
-import whompum.com.calitvremote.Networking.UiAdapter.*
+import com.californiadreamshostel.firebaseclient.Reference
+import com.californiadreamshostel.firebaseclient.ReferenceItem
+import whompum.com.calitvremote.UiAdapter.*
 
 class ShelfListAdapter(d: List<Reference>,
                        @NonNull l: ReferenceLayoutProvider): ObservableListAdapter(d, l) {

@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import whompum.com.calitvremote.Networking.Data.DataSchema
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
-import whompum.com.calitvremote.Networking.UiAdapter.ReferenceViewHolder
+import com.californiadreamshostel.firebaseclient.DataSchema
+import com.californiadreamshostel.firebaseclient.ReferenceItem
+import whompum.com.calitvremote.UiAdapter.ReferenceViewHolder
 import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Slides.SlideItem
 import whompum.com.calitvremote.Util.OnItemSelected

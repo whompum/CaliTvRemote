@@ -1,9 +1,9 @@
 package whompum.com.calitvremote.Shelf
 
 import android.support.v4.app.Fragment
-import whompum.com.calitvremote.Networking.Data.DataSchema
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
+import com.californiadreamshostel.firebaseclient.DataSchema
+import com.californiadreamshostel.firebaseclient.Reference
+import com.californiadreamshostel.firebaseclient.ReferenceItem
 import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Shelf.Model.ShelfExtrasItem
 import whompum.com.calitvremote.Shelf.Model.ShelfItem

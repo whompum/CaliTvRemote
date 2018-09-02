@@ -1,5 +1,5 @@
 package whompum.com.calitvremote.Shelf.Model
 
-import whompum.com.calitvremote.Networking.Model.Reference
+import com.californiadreamshostel.firebaseclient.Reference
 
 data class ShelfItemHeader(val groupTitle: String): Reference(groupTitle)

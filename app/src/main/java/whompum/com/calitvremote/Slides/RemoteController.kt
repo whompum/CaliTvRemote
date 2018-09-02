@@ -6,13 +6,11 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import com.californiadreamshostel.firebaseclient.*
 
 import kotlinx.android.synthetic.main.slides.*
-import whompum.com.calitvremote.Networking.Data.*
-import whompum.com.calitvremote.Networking.Model.Reference
 import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Slides.UiAdapter.Dragger
 import whompum.com.calitvremote.Slides.UiAdapter.SlideLayoutProvider
@@ -58,7 +56,7 @@ class RemoteController: AppCompatActivity(){
             SlideItem(parentRef, ref, value)
         }
 
-        controller.onWriteFailureListener = object: OnFailureListener{
+        controller.onWriteFailureListener = object: OnFailureListener {
             override fun onFailure(item: Reference, exception: Exception) {
 
             }
@@ -127,8 +125,6 @@ class RemoteController: AppCompatActivity(){
         //Callback invoked by the AdapterObserver after a item swap event is detected
         val updatePositions = fun (from: Int, to: Int){
 
-            Log.i("DRAG_TEST", "Estoy Aqui Uno")
-
             //For each item within the range changed
             for(a in Math.min(from, to)..Math.max(from, to)) {
                 val item = getAdapterItem(a)
@@ -137,7 +133,6 @@ class RemoteController: AppCompatActivity(){
                 if(!updateItems.contains(item))
                     updateItems.add(item)
             }
-            Log.i("DRAG_TEST", "Estoy Aqui Dos")
             hasActiveUpdates = true
         }
 

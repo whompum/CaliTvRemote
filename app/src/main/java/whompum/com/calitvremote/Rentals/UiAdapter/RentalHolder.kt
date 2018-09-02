@@ -1,9 +1,9 @@
 package whompum.com.calitvremote.Rentals.UiAdapter
 
 import android.view.View
-import whompum.com.calitvremote.Networking.UiAdapter.ObservableReferenceViewHolder
-import whompum.com.calitvremote.Networking.Data.DataSchema
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
+import com.californiadreamshostel.firebaseclient.DataSchema
+import com.californiadreamshostel.firebaseclient.ReferenceItem
+import whompum.com.calitvremote.UiAdapter.ObservableReferenceViewHolder
 import whompum.com.calitvremote.R
 
 class RentalHolder(v: View,

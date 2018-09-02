@@ -1,12 +1,14 @@
 package whompum.com.calitvremote.Rentals.UiAdapter
 
 import android.view.View
-import whompum.com.calitvremote.Networking.Data.DataSchema
-import whompum.com.calitvremote.Networking.UiAdapter.ReferenceLayoutProvider
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
-import whompum.com.calitvremote.Networking.UiAdapter.ObservableListAdapter
-import whompum.com.calitvremote.Networking.UiAdapter.ObservableReferenceViewHolder
+
+import com.californiadreamshostel.firebaseclient.DataSchema
+import com.californiadreamshostel.firebaseclient.Reference
+import com.californiadreamshostel.firebaseclient.ReferenceItem
+
+import whompum.com.calitvremote.UiAdapter.ReferenceLayoutProvider
+import whompum.com.calitvremote.UiAdapter.ObservableListAdapter
+import whompum.com.calitvremote.UiAdapter.ObservableReferenceViewHolder
 import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Rentals.RentalsItem
 

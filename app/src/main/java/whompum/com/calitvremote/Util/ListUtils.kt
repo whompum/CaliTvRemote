@@ -1,7 +1,7 @@
 package whompum.com.calitvremote.Util
 
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
+import com.californiadreamshostel.firebaseclient.Reference
+import com.californiadreamshostel.firebaseclient.ReferenceItem
 
 class ListUtils {
 

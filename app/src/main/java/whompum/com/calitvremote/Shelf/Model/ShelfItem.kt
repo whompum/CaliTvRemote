@@ -1,6 +1,6 @@
 package whompum.com.calitvremote.Shelf.Model
 
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
+import com.californiadreamshostel.firebaseclient.ReferenceItem
 
 class ShelfItem(parentRef: String,
                 ref: String,

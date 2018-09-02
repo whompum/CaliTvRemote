@@ -1,4 +1,4 @@
-package whompum.com.calitvremote.Networking.UiAdapter
+package whompum.com.calitvremote.UiAdapter
 
 import android.text.Editable
 import android.text.TextWatcher

@@ -1,7 +1,7 @@
 package whompum.com.calitvremote.Slides
 
-import whompum.com.calitvremote.Networking.Data.DataSchema
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
+import com.californiadreamshostel.firebaseclient.DataSchema
+import com.californiadreamshostel.firebaseclient.ReferenceItem
 
 class SlideItem(parent: String, reference: String, value: String  = ""): ReferenceItem(parent, reference, value) {
 

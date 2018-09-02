@@ -1,11 +1,11 @@
-package whompum.com.calitvremote.Networking.UiAdapter
+package whompum.com.calitvremote.UiAdapter
 
 import android.support.annotation.NonNull
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import whompum.com.calitvremote.Networking.Model.Reference
+import com.californiadreamshostel.firebaseclient.Reference
 
 abstract class ReferenceListAdapter(var data: List<Reference> = ArrayList(),
                                     @NonNull val layoutProvider: ReferenceLayoutProvider):

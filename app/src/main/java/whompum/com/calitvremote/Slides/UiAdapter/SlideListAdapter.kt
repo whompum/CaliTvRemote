@@ -1,15 +1,18 @@
 package whompum.com.calitvremote.Slides.UiAdapter
 
 import android.support.annotation.NonNull
-import android.util.Log
 import android.view.View
-import whompum.com.calitvremote.Networking.Data.DataSchema
-import whompum.com.calitvremote.Networking.UiAdapter.ReferenceLayoutProvider
-import whompum.com.calitvremote.Networking.UiAdapter.ReferenceListAdapter
-import whompum.com.calitvremote.Networking.UiAdapter.ReferenceViewHolder
+
+import com.californiadreamshostel.firebaseclient.DataSchema
+
+import whompum.com.calitvremote.UiAdapter.ReferenceLayoutProvider
+import whompum.com.calitvremote.UiAdapter.ReferenceListAdapter
+import whompum.com.calitvremote.UiAdapter.ReferenceViewHolder
 import whompum.com.calitvremote.Slides.SlideItem
 import whompum.com.calitvremote.Util.OnItemSelected
+
 import java.util.*
+
 import kotlin.Comparator
 import kotlin.collections.ArrayList
 
@@ -76,7 +79,6 @@ class SlideListAdapter(private var items: ArrayList<SlideItem> = ArrayList(),
     }
 
     private fun getItemPosition(i: SlideItem) = i.findChildBy(DataSchema.SLIDES_POSITION)?.value?.toInt()
-
 
     inner class ItemSelectedListener: OnItemSelected<Int> {
         override fun onItemSelected(position: Int) {

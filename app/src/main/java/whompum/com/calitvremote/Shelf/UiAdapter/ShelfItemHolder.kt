@@ -2,9 +2,9 @@ package whompum.com.calitvremote.Shelf.UiAdapter
 
 import android.view.View
 import android.widget.ImageView
-import whompum.com.calitvremote.Networking.UiAdapter.ObservableReferenceViewHolder
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
+import com.californiadreamshostel.firebaseclient.Reference
+import com.californiadreamshostel.firebaseclient.ReferenceItem
+import whompum.com.calitvremote.UiAdapter.ObservableReferenceViewHolder
 import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Shelf.Model.ShelfExtrasItem
 import whompum.com.calitvremote.Shelf.Model.ShelfItem

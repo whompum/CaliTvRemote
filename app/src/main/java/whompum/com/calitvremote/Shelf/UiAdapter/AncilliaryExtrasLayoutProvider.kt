@@ -1,7 +1,7 @@
 package whompum.com.calitvremote.Shelf.UiAdapter
 
-import whompum.com.calitvremote.Networking.UiAdapter.ReferenceLayoutProvider
-import whompum.com.calitvremote.Networking.Model.Reference
+import com.californiadreamshostel.firebaseclient.Reference
+import whompum.com.calitvremote.UiAdapter.ReferenceLayoutProvider
 import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Shelf.Model.ShelfExtrasItem
 import whompum.com.calitvremote.Shelf.Model.ShelfItem

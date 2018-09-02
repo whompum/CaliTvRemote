@@ -1,7 +1,7 @@
 package whompum.com.calitvremote.Slides.UiAdapter
 
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.UiAdapter.ReferenceLayoutProvider
+import com.californiadreamshostel.firebaseclient.Reference
+import whompum.com.calitvremote.UiAdapter.ReferenceLayoutProvider
 import whompum.com.calitvremote.R
 
 class SlideLayoutProvider: ReferenceLayoutProvider() {

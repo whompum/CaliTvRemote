@@ -1,7 +1,8 @@
-package whompum.com.calitvremote.Networking.UiAdapter
+package whompum.com.calitvremote.UiAdapter
 
 import android.support.annotation.LayoutRes
-import whompum.com.calitvremote.Networking.Model.Reference
+
+import com.californiadreamshostel.firebaseclient.Reference
 
 abstract class ReferenceLayoutProvider{
 

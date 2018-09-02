@@ -1,10 +1,10 @@
-package whompum.com.calitvremote.Networking.UiAdapter
+package whompum.com.calitvremote.UiAdapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
+import com.californiadreamshostel.firebaseclient.Reference
+import com.californiadreamshostel.firebaseclient.ReferenceItem
 
 abstract class ReferenceViewHolder(val layout: View): RecyclerView.ViewHolder(layout) {
 

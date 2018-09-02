@@ -4,13 +4,13 @@ import android.app.Dialog
 import android.content.Context
 import android.text.TextUtils
 import android.util.DisplayMetrics
-import android.util.Log
 import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import whompum.com.calitvremote.Networking.Data.DataSchema
-import whompum.com.calitvremote.Networking.Data.FirebaseController
+import com.californiadreamshostel.firebaseclient.DataSchema
+import com.californiadreamshostel.firebaseclient.FirebaseController
+
 import whompum.com.calitvremote.R
 
 
@@ -70,6 +70,7 @@ class NewRentalDialog(ctx: Context, val client: (RentalsItem)->Unit): Dialog(ctx
                     Toast.LENGTH_LONG).show()
 
         val item = RentalsItem(DataSchema.RENTALS, cleanedReference)
+
 
         item.addChild(RentalsItem(cleanedReference, DataSchema.RENTAL_THREE_HOURS, threeHours))
         item.addChild(RentalsItem(cleanedReference, DataSchema.RENTAL_FULL_DAY, fullDay))

@@ -1,4 +1,4 @@
-package whompum.com.calitvremote.Networking.Data
+package whompum.com.calitvremote.UiAdapter
 
 import android.os.Bundle
 import android.support.annotation.CallSuper
@@ -7,13 +7,10 @@ import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
-import whompum.com.calitvremote.Networking.UiAdapter.ObservableListAdapter
+import com.californiadreamshostel.firebaseclient.*
 import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Util.Animation
 import whompum.com.calitvremote.Util.BottomMarginListDecorator

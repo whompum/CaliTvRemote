@@ -1,11 +1,10 @@
-package whompum.com.calitvremote.Networking.UiAdapter
+package whompum.com.calitvremote.UiAdapter
 
 import android.support.annotation.IdRes
 import android.support.annotation.NonNull
-import android.util.Log
 import android.view.View
-import whompum.com.calitvremote.Networking.Model.Reference
-import whompum.com.calitvremote.Networking.Model.ReferenceItem
+import com.californiadreamshostel.firebaseclient.Reference
+import com.californiadreamshostel.firebaseclient.ReferenceItem
 
 abstract class ObservableListAdapter(data: List<Reference> = ArrayList(),
                                      @NonNull val l: ReferenceLayoutProvider): ReferenceListAdapter(data, l), OnValueChanged{
