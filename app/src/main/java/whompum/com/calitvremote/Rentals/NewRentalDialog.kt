@@ -71,7 +71,6 @@ class NewRentalDialog(ctx: Context, val client: (RentalsItem)->Unit): Dialog(ctx
 
         val item = RentalsItem(DataSchema.RENTALS, cleanedReference)
 
-
         item.addChild(RentalsItem(cleanedReference, DataSchema.RENTAL_THREE_HOURS, threeHours))
         item.addChild(RentalsItem(cleanedReference, DataSchema.RENTAL_FULL_DAY, fullDay))
 

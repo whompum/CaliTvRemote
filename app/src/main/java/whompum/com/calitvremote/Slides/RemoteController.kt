@@ -15,6 +15,7 @@ import whompum.com.calitvremote.R
 import whompum.com.calitvremote.Slides.UiAdapter.Dragger
 import whompum.com.calitvremote.Slides.UiAdapter.SlideLayoutProvider
 import whompum.com.calitvremote.Slides.UiAdapter.SlideListAdapter
+import whompum.com.calitvremote.Util.Display
 
 class RemoteController: AppCompatActivity(){
 
@@ -58,7 +59,7 @@ class RemoteController: AppCompatActivity(){
 
         controller.onWriteFailureListener = object: OnFailureListener {
             override fun onFailure(item: Reference, exception: Exception) {
-
+                Display.display(this@RemoteController, exception.localizedMessage)
             }
         }
 

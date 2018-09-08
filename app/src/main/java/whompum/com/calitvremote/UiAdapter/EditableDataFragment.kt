@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +35,7 @@ abstract class EditableDataFragment: Fragment(), OnSuccessListener, OnFailureLis
     protected lateinit var listAdapter: ObservableListAdapter
 
     private lateinit var list: RecyclerView //Bound from R.id.editable_list
+    private lateinit var marginDecorator: RecyclerView.ItemDecoration
     private lateinit var saveFab: FloatingActionButton //Bound from R.id.save_state_fab
 
 
@@ -74,8 +76,9 @@ abstract class EditableDataFragment: Fragment(), OnSuccessListener, OnFailureLis
 
         list = content.findViewById(LIST_ID)
         list.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        list.addItemDecoration(BottomMarginListDecorator(context?.resources?.getDimensionPixelSize(R.dimen.dimen_padding_ver_base)!!))
+        marginDecorator = BottomMarginListDecorator(context?.resources?.getDimensionPixelSize(R.dimen.dimen_padding_ver_base)!!)
 
+        list.addItemDecoration(marginDecorator)
 
         saveFab = content.findViewById(FAB_ID)
         saveFab.scaleY = 0F
@@ -146,13 +149,15 @@ abstract class EditableDataFragment: Fragment(), OnSuccessListener, OnFailureLis
         return{ groupItem, deltaType ->
 
             if(deltaType == SimpleEventListener.ADDED) {
+                list.removeItemDecoration(marginDecorator)
                 if (ListUtils.addItem(groupItem, listAdapter.data))
                     listAdapter.notifyItemInserted(listAdapter.data.lastIndex)
+                list.addItemDecoration(marginDecorator)
             }
 
             else if(deltaType == SimpleEventListener.CHANGE) {
-                if (ListUtils.updateGroupChildren(groupItem, listAdapter.data))
-                    listAdapter.notifyDataSetChanged()
+               if (ListUtils.updateGroupChildren(groupItem, listAdapter.data))
+                   listAdapter.notifyDataSetChanged()
             }
 
             else if(deltaType == SimpleEventListener.REMOVED) {

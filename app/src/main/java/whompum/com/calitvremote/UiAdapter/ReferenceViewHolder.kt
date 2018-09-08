@@ -8,7 +8,7 @@ import com.californiadreamshostel.firebaseclient.ReferenceItem
 
 abstract class ReferenceViewHolder(val layout: View): RecyclerView.ViewHolder(layout) {
 
-    fun bind(ref: Reference, dataType: Int){
+    open fun bind(ref: Reference, dataType: Int){
 
         if(ref is ReferenceItem){
             if(ref.hasChildren()) {
