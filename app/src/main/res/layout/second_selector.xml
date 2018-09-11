@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_selector_item_view_height">
         <LinearLayout
-            android:background="?attr/selectableItemBackground"
+            android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
             android:id="@+id/local_seconds_container"

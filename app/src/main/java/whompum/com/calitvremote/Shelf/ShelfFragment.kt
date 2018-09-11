@@ -29,7 +29,7 @@ abstract class ShelfFragment: EditableDataFragment() {
             Log.i("CLIENT_TEST", "REF: ${group.reference}")
 
             if (type == SimpleEventListener.ADDED || type == SimpleEventListener.CHANGE)
-                if (ListUtils.updateGroupChildren(group, listAdapter.data))
+                if (ListUtils.updateItem(group, listAdapter.data))
                     listAdapter.notifyDataSetChanged()
 
         }

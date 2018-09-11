@@ -1,5 +1,6 @@
 package whompum.com.calitvremote.Util
 
+import android.util.Log
 import com.californiadreamshostel.firebaseclient.Reference
 import com.californiadreamshostel.firebaseclient.ReferenceItem
 
@@ -12,31 +13,33 @@ class ListUtils {
          * and we just  want to update its items with more current values
          */
 
-        fun updateGroupChildren(updates: ReferenceItem, list: List<Reference>): Boolean{
+        fun updateItem(changedItem: ReferenceItem, list: List<Reference>): Boolean{
+              //Find the item we want to update.
+            val subject = list.find { it.reference == changedItem.reference }
 
-            var hasChanges = false
-
-            if(updates.hasChildren())
-                for(child in updates.getChildren())
-                    hasChanges = updateItem(child, list)
-            else hasChanges = updateItem(updates, list)
-
-
-            return hasChanges
-        }
-
-        fun updateItem(item: ReferenceItem, list: List<Reference>): Boolean{
-            val updateItem = list.find { it.reference == item.reference }
-
-            var hasUpdates = false
-
-            if(updateItem != null && updateItem is ReferenceItem) {
-                updateItem.value = item.value; updateItem.initializeValue = item.value
-                hasUpdates = true
+            if(subject != null && subject is ReferenceItem){
+                //Check if we're updating a group
+                if(changedItem.hasChildren()){
+                    for(child in changedItem.getChildren()){
+                    //Check if the subject has the children the changedItem has. If not, simply inject them
+                        if( !subject.hasChild(child.reference) ) {
+                            subject.addChild(child)
+                        }else{ //Simply update each child item
+                            val subjectChild = subject.findChildBy(child.reference)
+                            subjectChild?.value = child.value
+                            subjectChild?.initializeValue = child.initializeValue
+                        }
+                    }
+                }else{
+                    subject.value = changedItem.value
+                    subject.initializeValue = changedItem.value
+                }
             }
 
-            return hasUpdates
+            return true
         }
+
+        //Set initial value too
 
         /*
          * Attempts to add an item to the Adapter.
@@ -57,23 +60,7 @@ class ListUtils {
             return false
         }
 
-        /*
-         * Updates an entire group object in the adapter
-         */
-        fun updateGroupItem(group: Reference, list: List<Reference>): Int{
-
-            //Find the child of the dataset whose ref matches the group ref
-            for(a in 0 until list.size)
-                if(list[a].reference == group.reference)
-                    if(list is ArrayList) {
-                        list[a] = group
-                        return a
-                    }
-
-        return -1
-        }
-
-        public fun deleteItem(ref: Reference, data: List<Reference>): Int{
+        fun deleteItem(ref: Reference, data: List<Reference>): Int{
 
             for(a in 0 until data.size)
                 if(data[a].reference == ref.reference)

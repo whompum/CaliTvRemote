@@ -38,7 +38,8 @@
         app:layout_constraintBottom_toBottomOf="@id/id_icon"
         app:layout_constraintStart_toEndOf="@id/id_icon"
         style="@style/StylePriceItemValue"
-        android:layout_marginStart="@dimen/dimen_padding_hor_base" />
+        android:layout_marginStart="@dimen/dimen_padding_hor_base"
+        tools:ignore="UnknownId" />
 </android.support.constraint.ConstraintLayout>
 
 </android.support.v7.widget.CardView>

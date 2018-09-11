@@ -149,6 +149,7 @@ abstract class EditableDataFragment: Fragment(), OnSuccessListener, OnFailureLis
         return{ groupItem, deltaType ->
 
             if(deltaType == SimpleEventListener.ADDED) {
+                Log.i("RENTAL_TEST", "ITEM ADDED")
                 list.removeItemDecoration(marginDecorator)
                 if (ListUtils.addItem(groupItem, listAdapter.data))
                     listAdapter.notifyItemInserted(listAdapter.data.lastIndex)
@@ -156,7 +157,14 @@ abstract class EditableDataFragment: Fragment(), OnSuccessListener, OnFailureLis
             }
 
             else if(deltaType == SimpleEventListener.CHANGE) {
-               if (ListUtils.updateGroupChildren(groupItem, listAdapter.data))
+                Log.i("RENTAL_TEST", "ITEM CHANGED")
+
+                Log.i("RENTAL_TEST", "REFERENCE: ${groupItem.reference}")
+
+                for(child in groupItem.getChildren())
+                    Log.i("RENTAL_TEST", "CHILD REFERENCE: ${child.reference} HAS VALUE: ${child.value}")
+
+                if (ListUtils.updateItem(groupItem, listAdapter.data))
                    listAdapter.notifyDataSetChanged()
             }
 

@@ -37,7 +37,7 @@
             android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:background="?attr/selectableItemBackgroundBorderless"
+        android:background="?android:selectableItemBackgroundBorderless"
         android:clickable="true"
         android:focusable="true"
         android:id="@+id/id_local_duration_container"

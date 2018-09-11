@@ -130,7 +130,7 @@
         android:drawableEnd="@drawable/icon_arrow_right"
         android:clickable="true"
         android:focusable="true"
-        android:background="?attr/selectableItemBackgroundBorderless"
+        android:background="?android:selectableItemBackgroundBorderless"
         android:textSize="@dimen/dimen_text_medium"
         android:id="@+id/id_local_login"
         android:textColor="@color/colorPrimary"
